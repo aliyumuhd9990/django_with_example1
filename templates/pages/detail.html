@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+post_detail_page
+{% endblock title %}
+{% block content %}
+<div class="container">
+    <h2 class="text-success text-capitalize">{{ post.title }}</h2>
+    <p class="detail">{{ post.body }}</p>
+
+
+    <hr>
+    <a href="{% url 'pages:update_post' post.pk %}" class="text-success">Edit Post</a> | 
+    <a href="{% url 'pages:delete_post' post.pk %}" class="text-success">Delete Post</a>
+</div>
+{% endblock content %}

@@ -1,0 +1,48 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    /* background-color: ; */
+    font-family: 'Times New Roman', Times, serif;
+}
+nav {
+    background-color: rgb(149, 189, 149);
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: rgb(97, 141, 97);
+}
+
+nav .active:active {
+    color: rgb(97, 141, 97);
+}
+

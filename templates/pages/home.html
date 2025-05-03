@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title%} home_page {% endblock%}
+{% block content %}
+
+<div class="container">
+    <h2 class="text-success text-center">Post </h2>
+    <br>
+    <hr>
+    {% if user.is_authenticated %}
+    <p>Hi, <span class="text-success text-lowercase">{{user.username}}</span></p>
+    {% else %}
+    <p>You're not Login</p>
+    <a href="{% url 'account:login' %}" class="text-success">Login</a> | 
+    <a href="{% url 'account:signup' %}" class="text-success">Signup</a>
+    <hr>
+    {% endif %}
+    <br>
+
+
+    {% for p in post %}
+    <h5><a href= "{% url 'pages:post_detail' p.pk %}" class="text-success">{{ p.title }}</a></h5>
+    <p>{{ p.body }}<p>
+        <br><br>
+    {% endfor %}
+</div>
+{% endblock %}
